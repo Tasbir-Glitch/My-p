@@ -26,7 +26,7 @@
     margin-bottom: 70px !important;
 }
 
-::selection{
+::selection {
     background: $primary-color;
     color: $white-color;
 }
@@ -34,17 +34,19 @@
 .container {
     padding: 0 8%;
     width: 100%;
-    @media(max-width: 1200px){
+
+    @media(max-width: 1200px) {
         padding: 0 5%;
     }
-   
+
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media(max-width: 1200px){
+
+    @media(max-width: 1200px) {
         flex-direction: column;
     }
 }
@@ -53,17 +55,6 @@
     position: relative;
     text-align: center;
     margin-bottom: 150px;
-
-    &::after {
-        content: '';
-        position: absolute;
-        top: 24px;
-        left: 55.5%;
-        transform: translateX(-50%);
-        width: 20px;
-        height: 4px;
-        background: $primary-color;
-    }
 
     h1 {
         font-size: 40px;
@@ -123,6 +114,7 @@
 .social-icons {
     position: relative;
     display: flex;
+
     &::after {
         content: '';
         position: absolute;
@@ -161,7 +153,7 @@
     }
 }
 
-.back-element{
+.back-element {
     &::before {
         content: '';
         position: absolute;
@@ -175,13 +167,20 @@
         transform: rotate(10deg);
         transition: transform 500ms;
         z-index: -1;
-    
-        .change {
-          background-image: $primary-gradient;
+
+        @media(max-width: 761px) {
+            transform: rotate(3deg);
         }
-      }
+
+        .change {
+            background-image: $primary-gradient;
+        }
+    }
+
+
 }
-.back-element-B{
+
+.back-element-B {
     &::before {
         content: '';
         position: absolute;
@@ -195,14 +194,16 @@
         transform: rotate(5deg);
         transition: transform 500ms;
         z-index: -1;
-    
+
         .change {
-          background-image: $primary-gradient;
+            background-image: $primary-gradient;
         }
-      }
+
+    }
+
 }
 
-.back-element-R{
+.back-element-R {
     &::before {
         content: '';
         position: absolute;
@@ -256,7 +257,8 @@
         left: 320px;
         top: 300px;
     }
-    @media(max-width: 1360px){
+
+    @media(max-width: 1360px) {
         display: none;
     }
 }
@@ -265,55 +267,102 @@
     padding: 20px;
     display: none;
 }
-    .slider-prev{
-        background: $primary-color;
-        padding: 20px;
-        border-radius: 50%;
+
+.slider-arrows {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    @media(max-width: 590px){
+        bottom: -10px;
+      }
+}
+
+.slider-prev {
+    background: $primary-color;
+    padding: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 65%;
+    left: 100px;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &::before {
+        content: '';
         position: absolute;
-        top: 65%;
-        left: 100px;
-        transform: translateY(-50%);
-        cursor: pointer;
-        &::before {
-            content: '';
-            position: absolute;
-            background: $lite-primary-color;
-            opacity: 50%;
-            width: 100%;
-            height: 100%;
-            top: 0px;
-            right: 5px;
-            border-radius: 20px;
-            transition: all 300ms;
-            z-index: 0;
-        }
-        &:hover::before{
-            right: 8px;
-        }
+        background: $lite-primary-color;
+        opacity: 50%;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        right: 5px;
+        border-radius: 20px;
+        transition: all 300ms;
+        z-index: 0;
     }
-    .slider-next{
-        background: $primary-color;
-        padding: 20px;
-        border-radius: 50%;
+
+    &:hover::before {
+        right: 8px;
+    }
+
+    @media(max-width: 1400px) {
+        position: static;
+        top: auto;
+        bottom: -20px;
+        left: 300px;
+    }
+    @media(max-width: 590px){
+        width: 20px;
+        height: 20px;
+      }
+}
+
+.slider-next {
+    background: $primary-color;
+    padding: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 65%;
+    right: 100px;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &::before {
+        content: '';
         position: absolute;
-        top: 65%;
-        right: 100px;
-        transform: translateY(-50%);
-        cursor: pointer;
-        &::before {
-            content: '';
-            position: absolute;
-            background: $lite-primary-color;
-            opacity: 50%;
-            width: 100%;
-            height: 100%;
-            top: 0px;
-            left: 5px;
-            border-radius: 20px;
-            transition: all 300ms;
-            z-index: 0;
-        }
-        &:hover::before{
-            left: 8px;
-        }
+        background: $lite-primary-color;
+        opacity: 50%;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 5px;
+        border-radius: 20px;
+        transition: all 300ms;
+        z-index: 0;
     }
+
+    &:hover::before {
+        left: 8px;
+    }
+
+    @media(max-width: 1400px) {
+        position: static;
+        top: auto;
+        bottom: -20px;
+        right: 300px;
+    }
+    @media(max-width: 590px){
+        width: 20px;
+        height: 20px;
+      }
+}

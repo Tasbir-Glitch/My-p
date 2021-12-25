@@ -41,7 +41,7 @@
           },
           autoplay: {
             speed: 500,
-            delay: 1000,
+            delay: 2000,
           },
           speed: 500,
 

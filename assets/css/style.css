@@ -199,7 +199,7 @@
   left: 360px;
   top: 230px;
   display: none; }
-@media (max-width: 1360px) {
+@media (max-width: 1410px) {
   .floating-elementX {
     display: none; } }
 
@@ -496,6 +496,7 @@ body {
     justify-content: space-between; }
 
 .contents {
+  max-width: 60%;
   margin-right: 10px;
   background: black;
   position: relative;
@@ -505,6 +506,9 @@ body {
     font-size: 50px;
     font-weight: 700;
     position: relative; }
+    @media (max-width: 1410px) {
+      .contents h1 {
+        font-size: 40px; } }
   .contents p {
     max-width: 600px;
     line-height: 25px;
@@ -518,6 +522,11 @@ body {
       margin-top: 50px; }
       .contents .social-icons {
         margin-bottom: 50px; } }
+  @media (max-width: 768px) {
+    .contents h1 {
+      font-size: 35px; }
+    .contents p {
+      font-size: 13px; } }
   .contents::before {
     transform: rotate(5deg);
     border-radius: 20px; }
@@ -552,12 +561,11 @@ body {
     transform: scale(104%); }
   .hero:hover::before {
     transform: rotate(-5deg); }
-  @media (max-width: 1200px) {
-    .hero {
-      max-width: 60%; } }
   @media (max-width: 768px) {
     .hero {
-      max-width: 100%; } }
+      max-width: 100%; }
+      .hero h1 {
+        font-size: 30px; } }
 
 .skill {
   display: flex;

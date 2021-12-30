@@ -239,8 +239,8 @@ body {
 }
 
 .contents {
+  max-width: 60%;
   margin-right: 10px;
-
   background: $black-color;
   position: relative;
   border-radius: 20px;
@@ -250,6 +250,9 @@ body {
     font-size: 50px;
     font-weight: 700;
     position: relative;
+    @media(max-width: 1410px) {
+      font-size: 40px;
+  }
   }
 
   p {
@@ -265,11 +268,17 @@ body {
   @media(max-width: 1200px) {
     max-width: 100%;
     margin-right: 0;
-
     margin-top: 50px;
-
     .social-icons {
       margin-bottom: 50px;
+    }
+  }
+  @media(max-width: 768px) {
+    h1{
+        font-size: 35px;
+    }
+    p{
+      font-size: 13px;
     }
   }
 
@@ -332,12 +341,12 @@ body {
     }
   }
 
-  @media(max-width: 1200px) {
-    max-width: 60%;
-  }
 
   @media(max-width: 768px) {
     max-width: 100%;
+    h1{
+        font-size: 30px;
+    }
   }
 }
 

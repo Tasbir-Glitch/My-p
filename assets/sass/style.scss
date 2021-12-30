@@ -383,6 +383,9 @@ body {
   &:hover {
     &::before {
       transform: rotate(-10deg);
+      @media(max-width: 761px){
+        transform: rotate(-3deg);
+      }
     }
   }
 }
@@ -643,7 +646,9 @@ body {
   &::before {
     top: -10px;
     transform: rotate(-2deg);
-    
+    @media(max-width: 761px){
+      display: none;
+    }
   }
 
   &:hover {

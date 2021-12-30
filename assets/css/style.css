@@ -226,7 +226,7 @@
   @media (max-width: 590px) {
     .slider-arrows {
       width: 100px;
-      margin-top: 30px; } }
+      margin-top: 40px; } }
 
 .slider-prev {
   background: #1ED761;
@@ -590,6 +590,9 @@ body {
   position: relative; }
   .skills:hover::before {
     transform: rotate(-10deg); }
+    @media (max-width: 761px) {
+      .skills:hover::before {
+        transform: rotate(-3deg); } }
 
 .skills-bar {
   padding: 25px 30px; }
@@ -779,6 +782,9 @@ body {
   .swiper::before {
     top: -10px;
     transform: rotate(-2deg); }
+    @media (max-width: 761px) {
+      .swiper::before {
+        display: none; } }
   .swiper:hover::before {
     transform: rotate(3deg); }
 
